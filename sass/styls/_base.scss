@@ -1,0 +1,49 @@
+$default-font-color: #0000;
+$background-color: #DFF700;
+$container-bgcolor: rgb(0, 157, 255);
+$textbox-bordercolor: lightgray;
+$button-textcolor: #fff;
+$add-button-color: #dff700;
+$clear-button-color: #9f6060;
+$header-background-color: #fdd;
+$nav-a-color: blue;
+$nav-a-hovercolor: #dff700;
+
+
+
+@mixin mq($size) {
+    @media only screen and (min-width: $size) {
+        @content
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: $default-font-color;
+    width: 100%;
+    min-height: 100%;
+    @include mq(768px){
+        font-size: 22px
+    }
+}
+
+body{
+    padding: 20px;
+    background-color: $background-color;
+}
+
+ section{
+    background-color: $container-bgcolor;
+    width: 90%;
+    max-width: 700px;
+    margin: auto;
+    border: 1px solid $container-bgcolor;
+    border-radius: 10px;
+}
